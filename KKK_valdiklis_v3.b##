@@ -144,8 +144,11 @@
 <text x="8.255" y="3.175" size="1.016" layer="25" rot="R270" align="bottom-right">DTR</text>
 <text x="59.69" y="63.5" size="1.27" layer="122" rot="MR0">&gt;PLOT_DATE_TIME</text>
 <text x="59.69" y="61.595" size="1.27" layer="122" rot="SMR0">&gt;DRAWING_NAME</text>
-<text x="-12.7" y="70.485" size="1.016" layer="121" rot="SR270">https://github.com/stevemarple/Calunium</text>
-<text x="-5.08" y="27.94" size="1.27" layer="122" rot="SMR90">https://github.com/stevemarple/Calunium</text>
+<text x="5.08" y="52.705" size="1.27" layer="121">License: Creative Commons Attribution</text>
+<text x="5.08" y="55.88" size="1.27" layer="121">Copyright Steve Marple 2012</text>
+<text x="1.27" y="70.485" size="1.016" layer="121" rot="SR270">https://github.com/stevemarple/Calunium</text>
+<text x="1.27" y="27.94" size="1.27" layer="122" rot="SMR90">https://github.com/stevemarple/Calunium</text>
+<text x="14.605" y="49.53" size="1.27" layer="121">-ShareAlike 3.0 Unported License</text>
 <wire x1="26.67" y1="61.595" x2="7.62" y2="61.595" width="0.254" layer="25"/>
 <wire x1="7.62" y1="61.595" x2="3.175" y2="61.595" width="0.254" layer="25"/>
 <wire x1="3.175" y1="61.595" x2="3.175" y2="66.04" width="0.254" layer="25"/>
@@ -177,6 +180,7 @@
 <wire x1="84.7725" y1="12.7" x2="85.725" y2="12.7" width="0.254" layer="25"/>
 <wire x1="84.7725" y1="12.7" x2="85.4075" y2="13.0175" width="0.254" layer="25"/>
 <wire x1="84.7725" y1="12.7" x2="85.4075" y2="12.3825" width="0.254" layer="25"/>
+<wire x1="-1.905" y1="82.55" x2="88.265" y2="82.55" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="SparkFun">
