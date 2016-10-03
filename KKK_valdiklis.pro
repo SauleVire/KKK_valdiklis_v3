@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Darbas/GitHub/KKK_valdiklis_v3/KKK_valdiklis.brd
 
-Start at      : 22:50:22 (2016.10.02)
-End at        : 22:50:23 (2016.10.02)
-Elapsed time  : 00:00:01
+Start at      : 23:12:38 (2016.10.03)
+End at        : 23:12:38 (2016.10.03)
+Elapsed time  : 00:00:00
 
-Signals       :    78   RoutingGrid: 50 mil  Layers: 2
-Connections   :   138   predefined:  0 ( 0 Vias )
+Signals       :    78   RoutingGrid: 39.3701 mil  Layers: 2
+Connections   :   138   predefined:  130 ( 26 Vias )
 
-Router memory :   37800
+Router memory :   58608
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :     Route
 
-Time per pass     :  00:00:00  00:00:00  00:00:00  00:00:00  00:00:01  00:00:00
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         1         0         0         0         0
-max. Total        :         0         0         0         0         0         0
+Time per pass     :  00:00:00
+Number of Ripups  :         0
+max. Level        :         1
+max. Total        :         0
 
-Routed            :        13       122       122       122       122       122
-Vias              :         0        83         8         3         2         1
-Resolution        :     9.4 %    88.4 %    88.4 %    88.4 %    88.4 %    88.4 %
+Routed            :         0
+Vias              :         0
+Resolution        :    94.2 %
 
-Final             : 88.4% finished
+Final             : 94.2% finished

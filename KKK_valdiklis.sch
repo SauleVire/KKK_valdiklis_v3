@@ -16371,7 +16371,9 @@ Various common sizes : AA, AAA, 20mm coin cell and 12mm coin cell.&lt;br&gt;
 <class number="1" name="power" width="0.6096" drill="0">
 <clearance class="1" value="0.2032"/>
 </class>
-<class number="3" name="antenna" width="0.6096" drill="0">
+<class number="2" name="D-" width="0" drill="0">
+</class>
+<class number="3" name="D+" width="0" drill="0">
 </class>
 <class number="5" name="220v" width="1" drill="0">
 </class>
@@ -17386,7 +17388,7 @@ valves switch</text>
 <wire x1="-111.76" y1="-20.32" x2="-102.87" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="D-" class="0">
 <segment>
 <pinref part="USB" gate="G$1" pin="D-"/>
 <wire x1="-134.62" y1="-48.26" x2="-139.7" y2="-48.26" width="0.1524" layer="91"/>
@@ -17395,7 +17397,7 @@ valves switch</text>
 <wire x1="-139.7" y1="-27.94" x2="-137.16" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="D+" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="UD+"/>
 <wire x1="-137.16" y1="-25.4" x2="-140.97" y2="-25.4" width="0.1524" layer="91"/>
