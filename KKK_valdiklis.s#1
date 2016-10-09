@@ -17931,11 +17931,11 @@ valves switch</text>
 <instance part="P+12" gate="VCC" x="-85.09" y="154.94" smashed="yes" rot="R90">
 <attribute name="VALUE" x="-81.28" y="158.75" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X11" gate="-1" x="-85.09" y="116.84" smashed="yes" rot="R180">
-<attribute name="NAME" x="-87.63" y="117.602" size="1.524" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-88.138" y="123.063" size="1.778" layer="96" rot="R180"/>
+<instance part="X11" gate="-1" x="-86.36" y="116.84" smashed="yes" rot="R180">
+<attribute name="NAME" x="-88.9" y="117.602" size="1.524" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-89.408" y="123.063" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="X11" gate="-2" x="-85.09" y="119.38" rot="R180"/>
+<instance part="X11" gate="-2" x="-86.36" y="119.38" rot="R180"/>
 <instance part="GND14" gate="1" x="-77.47" y="114.3"/>
 </instances>
 <busses>
@@ -18142,9 +18142,9 @@ valves switch</text>
 <wire x1="-92.71" y1="-20.32" x2="-86.36" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X11" gate="-1" pin="S"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="-77.47" y1="116.84" x2="-82.55" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="X11" gate="-1" pin="S"/>
+<wire x1="-77.47" y1="116.84" x2="-83.82" y2="116.84" width="0.2032" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -18411,9 +18411,9 @@ valves switch</text>
 <pinref part="IC4" gate="G$1" pin="PCINT26/INT0_PD2"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="2A"/>
-<wire x1="-73.66" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
-<label x="-85.09" y="125.73" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="3A"/>
+<wire x1="-43.18" y1="124.46" x2="-35.56" y2="124.46" width="0.1524" layer="91"/>
+<label x="-38.1" y="125.73" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D12" class="0">
@@ -18423,9 +18423,9 @@ valves switch</text>
 <pinref part="IC4" gate="G$1" pin="PCINT28/OC1B_PD4"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="3A"/>
-<wire x1="-43.18" y1="124.46" x2="-35.56" y2="124.46" width="0.1524" layer="91"/>
-<label x="-38.1" y="125.73" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="2A"/>
+<wire x1="-73.66" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
+<label x="-85.09" y="125.73" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D13" class="0">
@@ -18978,7 +18978,7 @@ valves switch</text>
 <segment>
 <pinref part="IC2" gate="G$1" pin="VCC2"/>
 <pinref part="X11" gate="-2" pin="S"/>
-<wire x1="-73.66" y1="119.38" x2="-82.55" y2="119.38" width="0.2032" layer="91"/>
+<wire x1="-73.66" y1="119.38" x2="-83.82" y2="119.38" width="0.2032" layer="91"/>
 </segment>
 </net>
 </nets>

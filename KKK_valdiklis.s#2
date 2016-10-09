@@ -12532,41 +12532,6 @@ http://www.st.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="supply2">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
-GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
-Please keep in mind, that these devices are necessary for the
-automatic wiring of the supply signals.&lt;p&gt;
-The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
-In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="+12V">
-<wire x1="0" y1="1.905" x2="0" y2="0.635" width="0.1524" layer="94"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-2.54" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+12V" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="+12V" symbol="+12V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Electromechanical">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find anything that moves- switches, relays, buttons, potentiometers. Also, anything that goes on a board but isn't electrical in nature- screws, standoffs, etc.&lt;br&gt;&lt;br&gt;
@@ -17726,7 +17691,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="IC2" library="st-microelectronics" deviceset="L293D" device=""/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY1" library="supply2" deviceset="+12V" device=""/>
 <part name="X6" library="con-molex" deviceset="22-23-2021" device="" value="Floor heating"/>
 <part name="X1" library="con-molex" deviceset="22-23-2021" device="" value="Boiler pump"/>
 <part name="X2" library="con-molex" deviceset="22-23-2021" device="" value="Storage tank pump"/>
@@ -17759,6 +17723,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="VCC" device=""/>
 <part name="P+12" library="supply1" deviceset="VCC" device=""/>
+<part name="X11" library="con-molex" deviceset="22-23-2021" device="" value="+12V"/>
+<part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17896,7 +17862,6 @@ valves switch</text>
 <instance part="IC2" gate="G$1" x="-58.42" y="137.16"/>
 <instance part="GND15" gate="1" x="-38.1" y="137.16" rot="R90"/>
 <instance part="GND18" gate="1" x="-78.74" y="137.16" rot="R270"/>
-<instance part="SUPPLY1" gate="+12V" x="-76.2" y="119.38" rot="R90"/>
 <instance part="X6" gate="-1" x="25.4" y="78.74" smashed="yes">
 <attribute name="NAME" x="27.94" y="77.978" size="1.524" layer="95"/>
 <attribute name="VALUE" x="22.098" y="82.677" size="1.778" layer="96"/>
@@ -17927,16 +17892,16 @@ valves switch</text>
 <attribute name="VALUE" x="22.098" y="100.457" size="1.778" layer="96"/>
 </instance>
 <instance part="X5" gate="-2" x="25.4" y="91.44"/>
-<instance part="X7" gate="-1" x="-73.66" y="106.68" smashed="yes">
-<attribute name="NAME" x="-71.12" y="105.918" size="1.524" layer="95"/>
-<attribute name="VALUE" x="-84.582" y="110.617" size="1.778" layer="96"/>
+<instance part="X7" gate="-1" x="-74.93" y="102.87" smashed="yes">
+<attribute name="NAME" x="-72.39" y="102.108" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-85.852" y="106.807" size="1.778" layer="96"/>
 </instance>
-<instance part="X7" gate="-2" x="-73.66" y="102.87"/>
-<instance part="X8" gate="-1" x="-44.45" y="106.68" smashed="yes">
-<attribute name="NAME" x="-41.91" y="105.918" size="1.524" layer="95"/>
-<attribute name="VALUE" x="-55.372" y="110.617" size="1.778" layer="96"/>
+<instance part="X7" gate="-2" x="-74.93" y="99.06"/>
+<instance part="X8" gate="-1" x="-45.72" y="102.87" smashed="yes">
+<attribute name="NAME" x="-43.18" y="102.108" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-56.642" y="106.807" size="1.778" layer="96"/>
 </instance>
-<instance part="X8" gate="-2" x="-44.45" y="102.87"/>
+<instance part="X8" gate="-2" x="-45.72" y="99.06"/>
 <instance part="GND3" gate="1" x="-160.02" y="21.59"/>
 <instance part="P+9" gate="VCC" x="-38.1" y="-59.69" rot="R90"/>
 <instance part="P+11" gate="VCC" x="-38.1" y="154.94" rot="R270"/>
@@ -17960,8 +17925,18 @@ valves switch</text>
 <instance part="GND6" gate="1" x="91.44" y="154.94" rot="R270"/>
 <instance part="P+7" gate="VCC" x="-154.94" y="21.59" rot="R90"/>
 <instance part="GND11" gate="1" x="-92.71" y="-17.78" rot="R180"/>
-<instance part="P+8" gate="VCC" x="-35.56" y="119.38" rot="R270"/>
-<instance part="P+12" gate="VCC" x="-85.09" y="154.94" rot="R90"/>
+<instance part="P+8" gate="VCC" x="-35.56" y="119.38" smashed="yes" rot="R270">
+<attribute name="VALUE" x="-38.1" y="120.65" size="1.778" layer="96"/>
+</instance>
+<instance part="P+12" gate="VCC" x="-85.09" y="154.94" smashed="yes" rot="R90">
+<attribute name="VALUE" x="-81.28" y="158.75" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="X11" gate="-1" x="-85.09" y="116.84" smashed="yes" rot="R180">
+<attribute name="NAME" x="-87.63" y="117.602" size="1.524" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-88.138" y="123.063" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="X11" gate="-2" x="-85.09" y="119.38" rot="R180"/>
+<instance part="GND14" gate="1" x="-77.47" y="114.3"/>
 </instances>
 <busses>
 </busses>
@@ -18165,6 +18140,11 @@ valves switch</text>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="-92.71" y1="-20.32" x2="-86.36" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X11" gate="-1" pin="S"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="-77.47" y1="116.84" x2="-82.55" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -18421,7 +18401,7 @@ valves switch</text>
 <segment>
 <pinref part="IC2" gate="G$1" pin="1A"/>
 <wire x1="-73.66" y1="149.86" x2="-81.28" y2="149.86" width="0.1524" layer="91"/>
-<label x="-81.28" y="152.4" size="1.778" layer="95"/>
+<label x="-85.09" y="151.13" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D10(RX1)" class="0">
@@ -18433,7 +18413,7 @@ valves switch</text>
 <segment>
 <pinref part="IC2" gate="G$1" pin="2A"/>
 <wire x1="-73.66" y1="124.46" x2="-81.28" y2="124.46" width="0.1524" layer="91"/>
-<label x="-81.28" y="127" size="1.778" layer="95"/>
+<label x="-85.09" y="125.73" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D12" class="0">
@@ -18445,7 +18425,7 @@ valves switch</text>
 <segment>
 <pinref part="IC2" gate="G$1" pin="3A"/>
 <wire x1="-43.18" y1="124.46" x2="-35.56" y2="124.46" width="0.1524" layer="91"/>
-<label x="-38.1" y="127" size="1.778" layer="95"/>
+<label x="-38.1" y="125.73" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D13" class="0">
@@ -18457,7 +18437,7 @@ valves switch</text>
 <segment>
 <pinref part="IC2" gate="G$1" pin="4A"/>
 <wire x1="-43.18" y1="149.86" x2="-35.56" y2="149.86" width="0.1524" layer="91"/>
-<label x="-38.1" y="152.4" size="1.778" layer="95"/>
+<label x="-38.1" y="151.13" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D14" class="0">
@@ -18885,58 +18865,52 @@ valves switch</text>
 <pinref part="J4" gate="G$1" pin="3"/>
 </segment>
 </net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="VCC2"/>
-<pinref part="SUPPLY1" gate="+12V" pin="+12V"/>
-</segment>
-</net>
 <net name="MV1.1" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="1Y"/>
 <wire x1="-73.66" y1="144.78" x2="-81.28" y2="144.78" width="0.1524" layer="91"/>
-<label x="-83.82" y="147.32" size="1.778" layer="95"/>
+<label x="-85.09" y="146.05" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X7" gate="-1" pin="S"/>
-<wire x1="-76.2" y1="106.68" x2="-81.28" y2="106.68" width="0.1524" layer="91"/>
-<label x="-81.28" y="107.95" size="1.778" layer="95"/>
+<wire x1="-77.47" y1="102.87" x2="-82.55" y2="102.87" width="0.1524" layer="91"/>
+<label x="-82.55" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MV1.2" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="2Y"/>
 <wire x1="-73.66" y1="129.54" x2="-81.28" y2="129.54" width="0.1524" layer="91"/>
-<label x="-83.82" y="132.08" size="1.778" layer="95"/>
+<label x="-85.09" y="130.81" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X7" gate="-2" pin="S"/>
-<wire x1="-76.2" y1="102.87" x2="-81.28" y2="102.87" width="0.1524" layer="91"/>
-<label x="-81.28" y="104.14" size="1.778" layer="95"/>
+<wire x1="-77.47" y1="99.06" x2="-82.55" y2="99.06" width="0.1524" layer="91"/>
+<label x="-82.55" y="100.33" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MV2.1" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="4Y"/>
 <wire x1="-43.18" y1="144.78" x2="-35.56" y2="144.78" width="0.1524" layer="91"/>
-<label x="-35.56" y="147.32" size="1.778" layer="95"/>
+<label x="-38.1" y="146.05" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X8" gate="-1" pin="S"/>
-<wire x1="-46.99" y1="106.68" x2="-52.07" y2="106.68" width="0.1524" layer="91"/>
-<label x="-52.07" y="107.95" size="1.778" layer="95"/>
+<wire x1="-48.26" y1="102.87" x2="-53.34" y2="102.87" width="0.1524" layer="91"/>
+<label x="-53.34" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MV2.2" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="3Y"/>
 <wire x1="-43.18" y1="129.54" x2="-35.56" y2="129.54" width="0.1524" layer="91"/>
-<label x="-35.56" y="132.08" size="1.778" layer="95"/>
+<label x="-38.1" y="130.81" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X8" gate="-2" pin="S"/>
-<wire x1="-46.99" y1="102.87" x2="-52.07" y2="102.87" width="0.1524" layer="91"/>
-<label x="-52.07" y="104.14" size="1.778" layer="95"/>
+<wire x1="-48.26" y1="99.06" x2="-53.34" y2="99.06" width="0.1524" layer="91"/>
+<label x="-53.34" y="100.33" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -18998,6 +18972,13 @@ valves switch</text>
 <pinref part="JP2" gate="G$1" pin="2"/>
 <wire x1="152.4" y1="152.4" x2="154.94" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="152.4" x2="157.48" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="VCC2"/>
+<pinref part="X11" gate="-2" pin="S"/>
+<wire x1="-73.66" y1="119.38" x2="-82.55" y2="119.38" width="0.2032" layer="91"/>
 </segment>
 </net>
 </nets>

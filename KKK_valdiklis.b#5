@@ -4229,7 +4229,7 @@ design rules under a new name.</description>
 <pass name="Default">
 <param name="RoutingGrid" value="2.5mil"/>
 <param name="tpViaShape" value="round"/>
-<param name="PrefDir.1" value="0"/>
+<param name="PrefDir.1" value="*"/>
 <param name="PrefDir.2" value="0"/>
 <param name="PrefDir.3" value="0"/>
 <param name="PrefDir.4" value="0"/>
@@ -4244,7 +4244,7 @@ design rules under a new name.</description>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
 <param name="PrefDir.15" value="0"/>
-<param name="PrefDir.16" value="*"/>
+<param name="PrefDir.16" value="0"/>
 <param name="cfVia" value="8"/>
 <param name="cfNonPref" value="5"/>
 <param name="cfChangeDir" value="2"/>
@@ -4534,13 +4534,10 @@ design rules under a new name.</description>
 <contactref element="J4" pad="6"/>
 <contactref element="C2" pad="2"/>
 <contactref element="AC-DC-5V" pad="-V"/>
-<wire x1="101.6" y1="50.8" x2="101.6" y2="56.515" width="0.5" layer="1"/>
 <wire x1="93.726" y1="78.1685" x2="93.7006" y2="78.1812" width="0.5" layer="1"/>
 <wire x1="93.726" y1="71.882" x2="93.7006" y2="71.6788" width="0.5" layer="1"/>
 <wire x1="101.473" y1="66.1035" x2="101.473" y2="58.42" width="0.5" layer="1"/>
-<wire x1="101.473" y1="58.42" x2="101.473" y2="54.8005" width="0.5" layer="1"/>
 <wire x1="97.917" y1="69.6595" x2="101.473" y2="66.1035" width="0.5" layer="1"/>
-<wire x1="101.473" y1="54.8005" x2="101.6" y2="56.515" width="0.5" layer="1"/>
 <wire x1="97.917" y1="69.6595" x2="97.79" y2="69.85" width="0.5" layer="1"/>
 <wire x1="89.535" y1="20.447" x2="89.535" y2="17.907" width="0.5" layer="1"/>
 <wire x1="97.155" y1="20.447" x2="97.155" y2="17.907" width="0.5" layer="1"/>
@@ -4652,10 +4649,6 @@ design rules under a new name.</description>
 <wire x1="91.5035" y1="80.391" x2="89.408" y2="80.391" width="0.5" layer="1"/>
 <wire x1="93.5355" y1="78.359" x2="91.5035" y2="80.391" width="0.5" layer="1"/>
 <wire x1="93.5355" y1="78.359" x2="93.7006" y2="78.1812" width="0.5" layer="1"/>
-<wire x1="103.378" y1="50.673" x2="101.7905" y2="50.673" width="0.5" layer="1"/>
-<wire x1="107.7595" y1="46.2915" x2="103.378" y2="50.673" width="0.5" layer="1"/>
-<wire x1="107.7595" y1="25.7175" x2="107.7595" y2="46.2915" width="0.5" layer="1"/>
-<wire x1="101.7905" y1="50.673" x2="101.6" y2="50.8" width="0.5" layer="1"/>
 <wire x1="107.7595" y1="25.7175" x2="108.585" y2="25.527" width="0.5" layer="1"/>
 <wire x1="68.58" y1="31.8135" x2="68.58" y2="40.64" width="0.5" layer="16"/>
 <wire x1="64.897" y1="28.1305" x2="66.89725" y2="30.13075" width="0.5" layer="16"/>
@@ -4668,7 +4661,19 @@ design rules under a new name.</description>
 <wire x1="84.0105" y1="13.0175" x2="67.056" y2="29.972" width="0.5" layer="16"/>
 <wire x1="67.056" y1="29.972" x2="66.89725" y2="30.13075" width="0.5" layer="16"/>
 <wire x1="84.0105" y1="13.0175" x2="84.1375" y2="12.8905" width="0.5" layer="16"/>
-<wire x1="101.6635" y1="58.42" x2="101.473" y2="58.42" width="0.5" layer="1"/>
+<wire x1="101.6635" y1="58.42" x2="101.6" y2="58.42" width="0.5" layer="1"/>
+<contactref element="JP1" pad="1"/>
+<wire x1="101.6" y1="58.42" x2="101.473" y2="58.42" width="0.5" layer="1"/>
+<wire x1="101.854" y1="58.42" x2="116.84" y2="58.42" width="0.5" layer="1"/>
+<wire x1="101.854" y1="58.42" x2="101.6635" y2="58.42" width="0.5" layer="1"/>
+<wire x1="103.378" y1="50.673" x2="101.7905" y2="50.673" width="0.5" layer="1"/>
+<wire x1="107.696" y1="46.355" x2="103.378" y2="50.673" width="0.5" layer="1"/>
+<wire x1="107.696" y1="25.9715" x2="107.696" y2="46.355" width="0.5" layer="1"/>
+<wire x1="101.7905" y1="50.673" x2="101.6" y2="50.8" width="0.5" layer="1"/>
+<wire x1="107.696" y1="25.9715" x2="108.585" y2="25.527" width="0.5" layer="1"/>
+<wire x1="101.6" y1="50.8" x2="101.6" y2="56.515" width="0.5" layer="16"/>
+<wire x1="101.6" y1="56.515" x2="101.6" y2="58.2295" width="0.5" layer="1"/>
+<wire x1="101.6" y1="58.2295" x2="101.6" y2="58.42" width="0.5" layer="1"/>
 </signal>
 <signal name="VCC" class="1">
 <contactref element="R7" pad="P$2"/>
