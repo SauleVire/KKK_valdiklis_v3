@@ -17757,6 +17757,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="VCC" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="P+8" library="supply1" deviceset="VCC" device=""/>
+<part name="P+12" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17957,7 +17959,9 @@ valves switch</text>
 <instance part="P+6" gate="VCC" x="91.44" y="165.1" rot="R90"/>
 <instance part="GND6" gate="1" x="91.44" y="154.94" rot="R270"/>
 <instance part="P+7" gate="VCC" x="-154.94" y="21.59" rot="R90"/>
-<instance part="GND11" gate="1" x="-91.44" y="-17.78" rot="R180"/>
+<instance part="GND11" gate="1" x="-92.71" y="-17.78" rot="R180"/>
+<instance part="P+8" gate="VCC" x="-35.56" y="119.38" rot="R270"/>
+<instance part="P+12" gate="VCC" x="-85.09" y="154.94" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -18157,6 +18161,11 @@ valves switch</text>
 <wire x1="104.394" y1="154.94" x2="104.394" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="-92.71" y1="-20.32" x2="-86.36" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="1">
 <segment>
@@ -18255,6 +18264,16 @@ valves switch</text>
 <wire x1="-147.32" y1="21.59" x2="-152.4" y2="21.59" width="0.1524" layer="91"/>
 <junction x="-147.32" y="21.59"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="3-4EN"/>
+<pinref part="P+8" gate="VCC" pin="VCC"/>
+<wire x1="-38.1" y1="119.38" x2="-43.18" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="1-2EN"/>
+<pinref part="P+12" gate="VCC" pin="VCC"/>
+<wire x1="-82.55" y1="154.94" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
