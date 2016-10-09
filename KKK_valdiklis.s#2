@@ -17957,7 +17957,7 @@ valves switch</text>
 <instance part="P+6" gate="VCC" x="91.44" y="165.1" rot="R90"/>
 <instance part="GND6" gate="1" x="91.44" y="154.94" rot="R270"/>
 <instance part="P+7" gate="VCC" x="-154.94" y="21.59" rot="R90"/>
-<instance part="GND11" gate="1" x="-92.71" y="-17.78" rot="R180"/>
+<instance part="GND11" gate="1" x="-91.44" y="-17.78" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -18156,11 +18156,6 @@ valves switch</text>
 <pinref part="AC-DC-5V" gate="G$1" pin="-V"/>
 <wire x1="104.394" y1="154.94" x2="104.394" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="-92.71" y1="-20.32" x2="-86.36" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="1">
