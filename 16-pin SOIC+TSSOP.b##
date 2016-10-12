@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="mm"/>
+<grid distance="0.05" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -520,6 +520,10 @@ einem neuen Namen ab.</description>
 <contactref element="U$2" pad="5"/>
 <wire x1="2.667" y1="9.525" x2="4.417" y2="9.525" width="0.3" layer="1"/>
 <wire x1="2.032" y1="8.89" x2="2.667" y2="9.525" width="0.3" layer="1"/>
+</signal>
+<signal name="N$5">
+<wire x1="3.81" y1="10.16" x2="3.81" y2="12.7" width="0.0254" layer="16"/>
+<wire x1="3.81" y1="10.16" x2="3.81" y2="12.7" width="0.0254" layer="16"/>
 </signal>
 </signals>
 </board>
