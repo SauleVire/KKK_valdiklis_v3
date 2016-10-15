@@ -19523,7 +19523,7 @@ valves switch</text>
 <wire x1="-5.08" y1="114.3" x2="-2.54" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="5">
+<net name="N$19" class="5">
 <segment>
 <pinref part="K4" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="114.3" x2="17.78" y2="114.3" width="0.1524" layer="91"/>
@@ -19570,7 +19570,7 @@ valves switch</text>
 <wire x1="-5.08" y1="149.86" x2="-2.54" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$25" class="5">
+<net name="N$35" class="5">
 <segment>
 <pinref part="K2" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="149.86" x2="17.78" y2="149.86" width="0.1524" layer="91"/>
@@ -19612,7 +19612,7 @@ valves switch</text>
 <wire x1="-5.08" y1="78.74" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$35" class="5">
+<net name="N$41" class="5">
 <segment>
 <pinref part="K6" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
@@ -19633,7 +19633,7 @@ valves switch</text>
 <wire x1="-5.08" y1="96.52" x2="-2.54" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$38" class="5">
+<net name="N$40" class="5">
 <segment>
 <pinref part="K5" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="96.52" x2="17.78" y2="96.52" width="0.1524" layer="91"/>
