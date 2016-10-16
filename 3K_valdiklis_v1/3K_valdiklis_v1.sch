@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2686,12 +2686,6 @@ Source: http://www.atmel.com/dyn/resources/prod_documents/doc2593.pdf</descripti
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="+5V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -2711,19 +2705,6 @@ Source: http://www.atmel.com/dyn/resources/prod_documents/doc2593.pdf</descripti
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="VCC" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="+5V" prefix="P+">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -18551,11 +18532,11 @@ Used, eg, on the Arduino Pro/ Pro Mini boards.&lt;br&gt;
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND23" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$2" library="ch340" deviceset="CH340G" device=""/>
-<part name="+3V9" library="supply1" deviceset="+5V" device=""/>
 <part name="Y1" library="SparkFun-FreqCtrl" deviceset="RESONATOR" device="PTH" value="12mhz"/>
 <part name="C3" library="SparkFun" deviceset="CAP" device="PTH" value="100n"/>
 <part name="C4" library="SparkFun" deviceset="CAP" device="PTH" value="100n"/>
 <part name="JP3" library="SparkFun-Connectors-1" deviceset="USB" device="PTH" value="USB-B"/>
+<part name="P+15" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18776,9 +18757,6 @@ valves switch</text>
 <instance part="GND19" gate="1" x="-58.42" y="67.31"/>
 <instance part="GND23" gate="1" x="-162.56" y="125.984"/>
 <instance part="U$2" gate="G$1" x="-129.54" y="154.94"/>
-<instance part="+3V9" gate="1" x="-149.86" y="129.54" smashed="yes" rot="R90">
-<attribute name="VALUE" x="-148.59" y="128.27" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="Y1" gate="G$1" x="-152.4" y="144.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="-151.384" y="142.24" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-157.48" y="137.16" size="1.778" layer="96"/>
@@ -18792,6 +18770,9 @@ valves switch</text>
 <attribute name="VALUE" x="-105.791" y="146.304" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="JP3" gate="G$1" x="-134.62" y="132.08" rot="MR180"/>
+<instance part="P+15" gate="VCC" x="-110.49" y="119.38" smashed="yes" rot="R270">
+<attribute name="VALUE" x="-114.3" y="115.57" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -18818,6 +18799,7 @@ valves switch</text>
 <junction x="-76.2" y="7.62"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="-96.52" y1="7.62" x2="-88.9" y2="7.62" width="0.2032" layer="91"/>
+<junction x="-88.9" y="7.62"/>
 </segment>
 <segment>
 <wire x1="-160.02" y1="-38.1" x2="-142.24" y2="-38.1" width="0.1524" layer="91"/>
@@ -18837,6 +18819,7 @@ valves switch</text>
 <wire x1="-33.02" y1="-17.78" x2="-33.02" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="-17.78" x2="-33.02" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="-33.02" y="-17.78"/>
 </segment>
 <segment>
 <wire x1="-88.9" y1="-2.54" x2="-86.36" y2="-2.54" width="0.1524" layer="91"/>
@@ -18845,6 +18828,7 @@ valves switch</text>
 <pinref part="S1" gate="S" pin="1"/>
 <pinref part="S1" gate="S" pin="2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<junction x="-88.9" y="-2.54"/>
 </segment>
 <segment>
 <wire x1="53.34" y1="10.16" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
@@ -18916,6 +18900,8 @@ valves switch</text>
 <wire x1="-49.53" y1="69.85" x2="-49.53" y2="72.39" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 <junction x="-58.42" y="69.85"/>
+<junction x="-49.53" y="69.85"/>
+<junction x="-49.53" y="72.39"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="GND"/>
@@ -18968,6 +18954,7 @@ valves switch</text>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="-73.66" y1="137.16" x2="-73.66" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="137.16" x2="-73.66" y2="137.16" width="0.1524" layer="91"/>
+<junction x="-73.66" y="137.16"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND3"/>
@@ -18976,6 +18963,7 @@ valves switch</text>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="-43.18" y1="137.16" x2="-43.18" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="137.16" x2="-43.18" y2="137.16" width="0.1524" layer="91"/>
+<junction x="-43.18" y="137.16"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -18990,13 +18978,16 @@ valves switch</text>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="104.394" y1="154.94" x2="98.298" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="104.394" y1="154.94" x2="98.425" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="98.425" y1="154.94" x2="98.298" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="98.298" y1="154.94" x2="93.98" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="98.298" y1="156.21" x2="98.298" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="AC-DC-5V" gate="G$1" pin="-V"/>
 <wire x1="104.394" y1="154.94" x2="104.394" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<junction x="98.425" y="154.94"/>
+<junction x="98.298" y="154.94"/>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
@@ -19109,11 +19100,14 @@ valves switch</text>
 </segment>
 <segment>
 <wire x1="93.98" y1="165.1" x2="98.298" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="98.298" y1="165.1" x2="104.394" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="98.298" y1="165.1" x2="98.425" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="98.425" y1="165.1" x2="104.394" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="98.298" y1="163.83" x2="98.298" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="AC-DC-5V" gate="G$1" pin="+V"/>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
+<junction x="98.425" y="165.1"/>
+<junction x="98.298" y="165.1"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="3.3V"/>
@@ -19130,6 +19124,17 @@ valves switch</text>
 <pinref part="IC2" gate="G$1" pin="1-2EN"/>
 <pinref part="P+12" gate="VCC" pin="VCC"/>
 <wire x1="-82.55" y1="154.94" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="VCC"/>
+<wire x1="-116.84" y1="162.56" x2="-113.03" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="-113.03" y1="162.56" x2="-113.03" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-113.03" y1="119.38" x2="-147.32" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-147.32" y1="119.38" x2="-147.32" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="VBUS"/>
+<wire x1="-137.16" y1="129.54" x2="-147.32" y2="129.54" width="0.2032" layer="91"/>
+<pinref part="P+15" gate="VCC" pin="VCC"/>
+<junction x="-113.03" y="119.38"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -19154,6 +19159,7 @@ valves switch</text>
 <pinref part="X9" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="1.27" x2="-40.64" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="1.27" x2="-40.64" y2="1.27" width="0.1524" layer="91"/>
+<junction x="-40.64" y="1.27"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -19481,6 +19487,7 @@ valves switch</text>
 <pinref part="DIODE2" gate="1" pin="C"/>
 <wire x1="-58.42" y1="77.47" x2="-58.42" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="X77" gate="-3" pin="S"/>
+<junction x="-58.42" y="81.28"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -19523,7 +19530,7 @@ valves switch</text>
 <wire x1="-5.08" y1="114.3" x2="-2.54" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="5">
+<net name="N$29" class="5">
 <segment>
 <pinref part="K4" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="114.3" x2="17.78" y2="114.3" width="0.1524" layer="91"/>
@@ -19570,7 +19577,7 @@ valves switch</text>
 <wire x1="-5.08" y1="149.86" x2="-2.54" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$35" class="5">
+<net name="N$25" class="5">
 <segment>
 <pinref part="K2" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="149.86" x2="17.78" y2="149.86" width="0.1524" layer="91"/>
@@ -19612,7 +19619,7 @@ valves switch</text>
 <wire x1="-5.08" y1="78.74" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$41" class="5">
+<net name="N$35" class="5">
 <segment>
 <pinref part="K6" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
@@ -19633,7 +19640,7 @@ valves switch</text>
 <wire x1="-5.08" y1="96.52" x2="-2.54" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$40" class="5">
+<net name="N$38" class="5">
 <segment>
 <pinref part="K5" gate="G$1" pin="DS1"/>
 <wire x1="22.86" y1="96.52" x2="17.78" y2="96.52" width="0.1524" layer="91"/>
@@ -19848,23 +19855,6 @@ valves switch</text>
 <wire x1="-49.53" y1="83.82" x2="-52.07" y2="83.82" width="0.2032" layer="91"/>
 <label x="-52.07" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="VCC2"/>
-<pinref part="X11" gate="-2" pin="S"/>
-<wire x1="-73.66" y1="119.38" x2="-83.82" y2="119.38" width="0.2032" layer="91"/>
-</segment>
-</net>
-<net name="+5V" class="1">
-<segment>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="-116.84" y1="162.56" x2="-113.03" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="-113.03" y1="162.56" x2="-113.03" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-113.03" y1="119.38" x2="-147.32" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="119.38" x2="-147.32" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="+3V9" gate="1" pin="+5V"/>
-<pinref part="JP3" gate="G$1" pin="VBUS"/>
-<wire x1="-137.16" y1="129.54" x2="-147.32" y2="129.54" width="0.2032" layer="91"/>
-</segment>
 </net>
 <net name="N$7" class="0">
 <segment>
@@ -19917,9 +19907,93 @@ valves switch</text>
 <wire x1="-149.86" y1="154.94" x2="-142.24" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="X11" gate="-2" pin="S"/>
+<wire x1="-83.82" y1="119.38" x2="-73.66" y2="119.38" width="0.2032" layer="91"/>
+<wire x1="-73.66" y1="119.38" x2="-73.66" y2="119.253" width="0.2032" layer="91"/>
+<junction x="-83.82" y="119.38"/>
+<pinref part="IC2" gate="G$1" pin="VCC2"/>
+<junction x="-73.66" y="119.38"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,160.02,66.04,IC5,VBAT,N$27,,,"/>
+<approved hash="104,1,-73.66,139.7,IC2,GND1,GND,,,"/>
+<approved hash="104,1,-73.66,134.62,IC2,GND2,GND,,,"/>
+<approved hash="104,1,-73.66,119.38,IC2,VCC2,N$19,,,"/>
+<approved hash="104,1,-43.18,154.94,IC2,VCC1,VCC,,,"/>
+<approved hash="104,1,-43.18,139.7,IC2,GND3,GND,,,"/>
+<approved hash="104,1,-43.18,134.62,IC2,GND4,GND,,,"/>
+<approved hash="104,1,162.56,55.88,BAT1,-,GND,,,"/>
+<approved hash="104,1,162.56,66.04,BAT1,+,N$27,,,"/>
+<approved hash="104,1,139.954,157.48,AC-DC-5V,AC0,N$3,,,"/>
+<approved hash="104,1,139.954,165.1,AC-DC-5V,AC1,220V,,,"/>
+<approved hash="106,1,-49.53,83.82,+12V,,,,,"/>
+<approved hash="106,1,53.34,33.02,A0,,,,,"/>
+<approved hash="106,1,53.34,30.48,A1,,,,,"/>
+<approved hash="106,1,53.34,-7.62,D18(TCK),,,,,"/>
+<approved hash="106,1,53.34,-5.08,D19(TMS),,,,,"/>
+<approved hash="106,1,53.34,-2.54,D20(TDO),,,,,"/>
+<approved hash="106,1,53.34,0,D21,,,,,"/>
+<approved hash="106,1,53.34,2.54,D22,,,,,"/>
+<approved hash="106,1,53.34,5.08,D23,,,,,"/>
+<approved hash="106,1,-104.14,7.62,DTR,,,,,"/>
+<approved hash="208,1,-33.02,-20.32,GND,sup,,,,"/>
+<approved hash="208,1,-86.36,-5.08,GND,sup,,,,"/>
+<approved hash="208,1,78.74,17.78,GND,sup,,,,"/>
+<approved hash="208,1,78.74,0,GND,sup,,,,"/>
+<approved hash="208,1,162.56,53.34,GND,sup,,,,"/>
+<approved hash="208,1,-50.8,12.7,GND,sup,,,,"/>
+<approved hash="208,1,137.16,119.38,GND,sup,,,,"/>
+<approved hash="208,1,-58.42,69.85,GND,sup,,,,"/>
+<approved hash="208,1,144.78,53.34,GND,sup,,,,"/>
+<approved hash="208,1,-78.74,-55.88,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,109.22,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,127,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,144.78,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,162.56,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,73.66,GND,sup,,,,"/>
+<approved hash="208,1,-7.62,91.44,GND,sup,,,,"/>
+<approved hash="208,1,-76.2,137.16,GND,sup,,,,"/>
+<approved hash="208,1,-40.64,137.16,GND,sup,,,,"/>
+<approved hash="208,1,-160.02,24.13,GND,sup,,,,"/>
+<approved hash="208,1,-119.38,-40.64,GND,sup,,,,"/>
+<approved hash="208,1,104.394,157.48,GND,out,,,,"/>
+<approved hash="208,1,93.98,154.94,GND,sup,,,,"/>
+<approved hash="208,1,-77.47,116.84,GND,sup,,,,"/>
+<approved hash="208,1,-162.56,128.524,GND,sup,,,,"/>
+<approved hash="106,1,160.02,71.12,SQW,,,,,"/>
+<approved hash="208,1,-81.28,25.4,VCC,sup,,,,"/>
+<approved hash="208,1,-50.8,25.4,VCC,sup,,,,"/>
+<approved hash="208,1,137.16,137.16,VCC,sup,,,,"/>
+<approved hash="208,1,137.16,137.16,VCC,sup,,,,"/>
+<approved hash="208,1,137.16,137.16,VCC,sup,,,,"/>
+<approved hash="208,1,101.6,17.78,VCC,sup,,,,"/>
+<approved hash="208,1,152.4,91.44,VCC,sup,,,,"/>
+<approved hash="208,1,127,86.36,VCC,sup,,,,"/>
+<approved hash="208,1,127,48.26,VCC,sup,,,,"/>
+<approved hash="208,1,-78.74,-43.18,VCC,sup,,,,"/>
+<approved hash="208,1,-35.56,-59.69,VCC,sup,,,,"/>
+<approved hash="208,1,-40.64,154.94,VCC,sup,,,,"/>
+<approved hash="208,1,-119.38,-25.4,VCC,sup,,,,"/>
+<approved hash="208,1,104.394,165.1,VCC,out,,,,"/>
+<approved hash="208,1,93.98,165.1,VCC,sup,,,,"/>
+<approved hash="208,1,-152.4,21.59,VCC,sup,,,,"/>
+<approved hash="208,1,-38.1,119.38,VCC,sup,,,,"/>
+<approved hash="208,1,-82.55,154.94,VCC,sup,,,,"/>
+<approved hash="208,1,-113.03,119.38,VCC,sup,,,,"/>
+<approved hash="110,1,-144.78,129.54,VCC,N$12,,,,"/>
+<approved hash="110,1,-144.78,129.54,VCC,N$12,,,,"/>
+<approved hash="112,1,137.16,138.43,,,,,,"/>
+<approved hash="115,1,162.56,19.9305,S2,,,,,"/>
+<approved hash="115,1,162.56,4.69053,S3,,,,,"/>
+<approved hash="115,1,162.56,-8.00947,S4,,,,,"/>
+<approved hash="115,1,99.9775,160.02,C2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
