@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -19479,17 +19479,6 @@ valves switch</text>
 <pinref part="T2" gate="1" pin="B"/>
 </segment>
 </net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="T2" gate="1" pin="C"/>
-<wire x1="-73.66" y1="81.28" x2="-58.42" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="81.28" x2="-49.53" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="DIODE2" gate="1" pin="C"/>
-<wire x1="-58.42" y1="77.47" x2="-58.42" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="X77" gate="-3" pin="S"/>
-<junction x="-58.42" y="81.28"/>
-</segment>
-</net>
 <net name="N$20" class="0">
 <segment>
 <wire x1="139.7" y1="91.44" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
@@ -19852,8 +19841,18 @@ valves switch</text>
 <net name="+12V" class="0">
 <segment>
 <pinref part="X77" gate="-4" pin="S"/>
-<wire x1="-49.53" y1="83.82" x2="-52.07" y2="83.82" width="0.2032" layer="91"/>
+<wire x1="-49.53" y1="83.82" x2="-50.8" y2="83.82" width="0.2032" layer="91"/>
 <label x="-52.07" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="T2" gate="1" pin="C"/>
+<wire x1="-50.8" y1="83.82" x2="-52.07" y2="83.82" width="0.2032" layer="91"/>
+<wire x1="-73.66" y1="81.28" x2="-58.42" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="81.28" x2="-50.8" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="DIODE2" gate="1" pin="C"/>
+<wire x1="-50.8" y1="81.28" x2="-49.53" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="77.47" x2="-58.42" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="X77" gate="-3" pin="S"/>
+<junction x="-58.42" y="81.28"/>
+<wire x1="-50.8" y1="83.82" x2="-50.8" y2="81.28" width="0.2032" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
